@@ -1,6 +1,6 @@
 package kpfu.ru.itis.models;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class User {
     private String login;

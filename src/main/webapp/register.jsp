@@ -36,6 +36,21 @@
                     </div>
                 </div>
 
+
+                <div class="form-group">
+                    <label for="email" class="control-label col-md-2">Email</label>
+                    <div class="col-md-10">
+                        <input name="email" class="form-control" id="email" placeholder="Email" type="email" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDate" class="control-label col-md-2">Birth Date</label>
+                    <div class="col-md-10">
+                        <input name="birthDate" class="form-control" id="birthDate" type="date" placeholder="date"/>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="password" class="control-label col-md-2">Password</label>
 

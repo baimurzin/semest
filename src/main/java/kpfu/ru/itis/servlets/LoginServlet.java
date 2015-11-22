@@ -3,6 +3,7 @@ package kpfu.ru.itis.servlets;
 import kpfu.ru.itis.models.User;
 import kpfu.ru.itis.repository.UserRepository;
 import kpfu.ru.itis.repository.impl.UserRepositoryImpl;
+import kpfu.ru.itis.util.CommonUtil;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         User user = userRepository.findUser(login);
         if (user == null) {
             req.setAttribute("error", "User not found");
-        } else if (!user.getPassword().equals(password)) {
+        } else if (!CommonUtil.checkString(password, user.getPassword())) {
             req.setAttribute("error", "Incorrect password");
         } else  {
             HttpSession session = req.getSession();

@@ -51,7 +51,7 @@
                     <label for="bd" class="control-label col-md-2">Birth Date</label>
 
                     <div class="col-md-10">
-                        <input readonly="readonly" name="bd" class="form-control allowEdit" id="bd" type="text" />
+                        <input readonly="readonly" name="birthDate" value="${user.birthDate}" class="form-control allowEdit" id="bd" type="text" />
                     </div>
                 </div>
                 <div hidden class="form-group" id="cancel">
