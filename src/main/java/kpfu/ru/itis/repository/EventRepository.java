@@ -6,7 +6,6 @@ import java.sql.Date;
 import java.util.List;
 
 /**
- * Created by vlad on 13.11.2015.
  */
 public interface EventRepository {
     List<Events> searchByName(String name);

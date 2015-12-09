@@ -2,9 +2,6 @@ package kpfu.ru.itis.models;
 
 import java.sql.Date;
 
-/**
- * Created by vlad on 13.11.2015.
- */
 public class Events {
     private String eventName;
     private Date date;
