@@ -22,7 +22,7 @@
     </div>
     <div class="row">
         <div class="col-lg-offset-4 col-lg-5">
-            <form action="update" method="post" class="form-horizontal">
+            <form id="profile" class="form-horizontal">
                 <div class="form-group">
                     <label for="login" class="control-label col-md-2">Login</label>
 
@@ -82,7 +82,21 @@
             $('#save').hide();
             $('#cancel').hide();
         });
+
+        $("#profile").submit(function (e) {
+            e.preventDefault();
+            $("#profile").serialize()
+            console.log(1122);
+            $.ajax('/profile?update', $.param(
+                $("#profile").serialize()
+            ), function (resp) {
+                console.log("=================");
+                console.log(resp);
+            })
+        })
     })
+
+
 </script>
 
 </body>

@@ -24,6 +24,8 @@ public class ResearchPageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String query = request.getParameter("query");
         List<Events> eventsList =  eventRepository.searchByName(query);
+        List<Events> eventsByDate = eventRepository.searchByDate(query);
+        eventsList.addAll(eventsByDate);
         response.setContentType("application/json");
 
         ObjectMapper mapper = new ObjectMapper();

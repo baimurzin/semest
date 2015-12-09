@@ -21,11 +21,15 @@ public class ProfileServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletUtil.checkAuth(request, response);
-
+        if (request.getParameter("update") != null) {
+            String query = request.getParameter("country");
+            System.out.println(query + "===============================");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletUtil.checkAuth(request, response);
+
         User user = userRepository.findUser((String)request.getSession().getAttribute("login"));
         request.setAttribute("user", user);
         request.getRequestDispatcher("profile.jsp").forward(request, response);

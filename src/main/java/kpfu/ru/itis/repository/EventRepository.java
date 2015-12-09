@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface EventRepository {
     List<Events> searchByName(String name);
-    List<Events> searchByDate(Date date);
+    List<Events> searchByDate(String year);
 }
